@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Quicksand";
+  font-weight: 500;
+  position: relative;
+}
+
+.main  {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 0.8rem 0;
+  font-size: 1.8rem;
+  background-color: #000a;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #333;
+  box-shadow: #fff1 0 1px 10rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  gap: 12rem;
+}
+
+.header-ul {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  flex: 2;
+}
+
+.header-list-item:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  gap: 1.2rem;
+}
+
+.logo {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 1200px;
+  padding: 0.4rem;
+}
+
+.header-search-input {
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+.header-search-input:focus {
+  outline: none;
+  border: 1px solid #aaa;
+}
+
+.header-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.header-link:hover {
+  color: #fff;
+}
+
+.player-list {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: default;
+  margin-bottom: 4.8rem;
+}
+
+.container {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 9.8rem 0;
+}
+
+.player-avatar {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.player-list td:nth-child(2) {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 4.8rem;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.player-list th {
+  width: 16rem;
+  padding: 1.2rem 0;
+}
+
+.player-list-criteria {
+  background-color: #fff1;
+}
+
+.player-list tr:not(:first-child) {
+  border-top: 1px solid #4e4e4e;
+}
+
+.heading-gamemode {
+  font-size: 4.8rem;
+  font-weight: 600;
+  margin: 1.8rem 0 1.2rem 0;
+}
+
+.heading-player {
+  font-size: 4.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.subheading {
+  margin-bottom: 4.8rem;
+  font-size: 1.4rem;
+  color: #fffc;
+}
+
+.player-list tr {
+  transition: 0.2s ease-out;
+}
+
+.player-list tr:not(:first-child):hover {
+  /* transform: scale(1.02); */
+  background-color: #fff1;
+}
+
+.btn-pagination svg {
+  width: 3.2rem;
+  height: 3.2rem;
+  color: #fff;
+}
+
+.btn-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff32;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.8rem;
+  transition: 0.2s;
+}
+
+.btn-next-10,
+.btn-prev-10 {
+  transform: scale(0.9);
+}
+
+.btn-pagination:hover {
+  background-color: #fff1;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.page {
+  font-size: 1.8rem;
+  margin: 0 1.2rem;
+}
+
+.criterium {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.criterium:not(.active):hover {
+  transform: scale(1.05);
+}
+
+.criterium.active {
+  background: radial-gradient(circle, #ffffff14, transparent 100%);
+}
+
+.player-stats-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  z-index: -10;
+  transition: 0.2s opacity ease-in-out;
+  background-color: #000a;
+}
+
+.player-stats-modal:not(.visible) .modal-container * {
+  opacity: 0;
+}
+
+.player-stats-modal.visible {
+  z-index: 10;
+  opacity: 1;
+}
+
+.player-stats-modal:not(.visible) {
+  opacity: 0;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 8rem;
+  right: 8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-container {
+  background-color: #000;
+  height: 100%;
+  padding: 6.4rem;
+  border-radius: 15px;
+  box-shadow: #ffffff0a 0 5px 12rem;
+  border: 1px solid #333;
+  position: relative;
+}
+
+.btn-close-modal svg {
+  color: #fff;
+  width: 4rem;
+  height: 4rem;
+}
+
+.modal-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  gap: 12.8rem;
+  padding: 4.8rem 0;
+}
+
+.header-search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.8rem;
+  transition: 0.2s;
+}
+
+.header-search-btn svg {
+  color: #aaa;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.header-search-btn:hover {
+  border: 1px solid #aaa;
+}
+
+.modal-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.8rem;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 2.4rem;
+}
+
+.modal-stats-table td {
+  padding: 1.2rem 2.4rem;
+  border-top: 1px solid #4e4e4e;
+}
+
+.modal-stats-table td:nth-child(2) {
+  text-align: center;
+}
+.modal-stats-table th:first-child {
+  text-align: left;
+}
+
+.player-stats-modal .container {
+  width: 50%;
+  height: auto;
+}
+
+.heading-uuid {
+  margin-top: 1.2rem;
+  text-align: center;
+}
+
+.modal-stats-table th {
+  padding: 1.2rem 2.4rem;
+  background-color: #fff1;
+}

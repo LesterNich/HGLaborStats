@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HGLabor | Stats - FFA</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <ul class="header-ul">
+          <li class="header-list-item">
+            <img src="../assets/logo.png" alt="" class="logo" />
+          </li>
+          <li class="header-list-item">HGLabor.de Stats</li>
+          <li class="header-list-item">
+            <a href="#" class="header-link">FFA</a>
+          </li>
+        </ul>
+        <div class="header-search-container">
+          <input
+            type="text"
+            class="header-search-input"
+            placeholder="Username / UUID"
+          />
+          <button class="header-search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h2 class="heading-gamemode">FFA</h2>
+        <p class="subheading sortby-text">Top Players (sorted by kills)</p>
+        <table class="player-list">
+          <tbody class="player-list-body"></tbody>
+        </table>
+        <div class="pagination-container">
+          <button class="btn-pagination btn-prev-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+              />
+            </svg>
+          </button>
+          <button class="btn-pagination btn-prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <p class="page">1</p>
+          <button class="btn-pagination btn-next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+          <button class="btn-pagination btn-next-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="player-stats-modal">
+        <button class="btn-close-modal">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div class="container">
+          <div class="modal-container">
+            <h2 class="heading-player"></h2>
+            <p class="subheading heading-uuid"></p>
+            <div class="modal-flex-container">
+              <img src="" alt="" class="player-body" />
+              <div class="modal-stats-container">
+                <table class="modal-stats-table">
+                  <tbody class="modal-stats-table-body">
+                    <tr>
+                      <th>Statistic</th>
+                      <th>Value</th>
+                    </tr>
+                    <tr>
+                      <td>Kills</td>
+                      <td class="player-kills"></td>
+                    </tr>
+                    <tr>
+                      <td>Deaths</td>
+                      <td class="player-deaths"></td>
+                    </tr>
+                    <tr>
+                      <td>K/D</td>
+                      <td class="player-kd"></td>
+                    </tr>
+                    <tr>
+                      <td>Bounty</td>
+                      <td class="player-bounty"></td>
+                    </tr>
+                    <tr>
+                      <td>XP</td>
+                      <td class="player-xp"></td>
+                    </tr>
+                    <tr>
+                      <td>Kill Streak</td>
+                      <td class="player-ks"></td>
+                    </tr>
+                    <tr>
+                      <td>Highest Kill Streak</td>
+                      <td class="player-hks"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
