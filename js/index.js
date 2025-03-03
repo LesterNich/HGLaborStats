@@ -166,7 +166,7 @@ function changePage(direction) {
 
 async function showModal(playerId, username) {
   const body = await fetch(
-    `https://crafatar.com/renders/body/${playerId}?scale=9`
+    `https://crafatar.com/renders/body/${playerId}?scale=9&overlay`
   ).then((res) => res.url);
   await updateModalStatsList(playerId);
   modalPlayerBodyImg.src = body;
